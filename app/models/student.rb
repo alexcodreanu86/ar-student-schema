@@ -3,7 +3,6 @@ require 'sqlite3'
 
 class Student < ActiveRecord::Base
 # implement your Student model here
-VALID_PHONE = /\d?\W?(\d{3})\W?(\d{3})\W?(\d{4})/
 validates :email, :format => { :with => /\w+\W?\w+?\@\w+\.\w+/,
     :message => "Invalid email" }
 validates :email, :uniqueness => true, :on => :create
