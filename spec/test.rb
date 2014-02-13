@@ -1,6 +1,7 @@
 
 require_relative '../app/models/student'
 require_relative '../app/models/teacher'
+require_relative '../app/models/student_teacher'
 require 'faker'
 arr = []
 # 9.times{ arr << Teacher.new(
@@ -21,3 +22,14 @@ real_deal = Teacher.new(name: "asdadas sfgsdg",
             address: "123 4353serfsd 234534sfdfsdf",
             phone: "2342635346")
 real_deal.save
+
+all_teachers = Teacher.all
+all_students = Student.all
+# all_teachers.each do|teacher|
+#   6.times do
+#     student = all_students.pop;
+#     StudentTeacher.new(student_id: student.id, teacher_id: teacher.id).save
+#   end
+# end
+
+
